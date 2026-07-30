@@ -1,9 +1,4 @@
 ---
-import Base from '../../layouts/Base.astro';
-import PostCard from '../../components/PostCard.astro';
-import { posts } from '../../data/posts.js';
+import Base from '../../layouts/Base.astro'; import PostCard from '../../components/PostCard.astro'; import {posts} from '../../data/posts.js';
 ---
-<Base title="Yazılar — Batı Sonrası Dünya">
-  <header class="page-hero"><div class="wrap"><p class="eyebrow">Yazılar</p><h1>Güncel analizler</h1><p>Küresel düzen, siyasi iktisat, demokrasi, eşitsizlik, BRICS, Küresel Güney ve Türkiye üzerine seçilmiş yazılar.</p></div></header>
-  <section class="section"><div class="wrap"><div class="post-grid">{posts.map((post) => <PostCard post={post} />)}</div></div></section>
-</Base>
+<Base title="Yazılar — Batı Sonrası Dünya"><section class="page-hero"><div class="wrap"><p class="eyebrow">Analizler ve değerlendirmeler</p><h1>Yazılar</h1><p>Küresel düzen, siyasi iktisat, demokrasi, kalkınma, Küresel Güney ve Türkiye üzerine seçilmiş yazılar.</p></div></section><section class="section"><div class="wrap"><div class="post-grid">{posts.map(post=><PostCard post={post}/>)}</div></div></section></Base>
