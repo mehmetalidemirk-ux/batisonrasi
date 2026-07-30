@@ -227,3 +227,10 @@
     display: none;
   }
 }
+/* Ayaklı Erdapfel görselini tamamen kaldır */
+
+.hero::after,
+.page-hero::before,
+.article-header::before {
+  display: none !important;
+}
