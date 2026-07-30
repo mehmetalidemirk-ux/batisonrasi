@@ -1,0 +1,55 @@
+---
+import '../styles/global.css';
+
+const {
+  title = 'Batı Sonrası Dünya',
+  description = 'Uluslararası Düzenin Krizi, ABD-Çin Rekabeti, Küresel Güney ve Türkiye',
+  image = '/og-default.jpg'
+} = Astro.props;
+
+const path = Astro.url.pathname;
+const nav = [
+  { href: '/', label: 'Ana Sayfa' },
+  { href: '/kitap/', label: 'Kitap' },
+  { href: '/yazarlar/', label: 'Yazarlar' },
+  { href: '/yazilar/', label: 'Yazılar' },
+  { href: '/kunye/', label: 'Künye' }
+];
+---
+<!doctype html>
+<html lang="tr">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width" />
+    <meta name="description" content={description} />
+    <meta property="og:title" content={title} />
+    <meta property="og:description" content={description} />
+    <meta property="og:type" content="website" />
+    <meta property="og:image" content={image} />
+    <meta name="twitter:card" content="summary_large_image" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@500;600;700;800&display=swap" rel="stylesheet" />
+    <title>{title}</title>
+  </head>
+  <body>
+    <header class="site-header">
+      <div class="wrap header-inner">
+        <a class="brand" href="/">Batı Sonrası Dünya</a>
+        <nav class="nav" aria-label="Ana menü">
+          {nav.map((item) => (
+            <a class={path === item.href ? 'active' : ''} href={item.href}>{item.label}</a>
+          ))}
+          <a class="buy-link" href="SATIN_ALMA_LINKI" target="_blank" rel="noreferrer">Satın Al</a>
+        </nav>
+      </div>
+    </header>
+    <main><slot /></main>
+    <footer class="site-footer footer">
+      <div class="wrap footer-inner">
+        <div>© {new Date().getFullYear()} Mustafa Kutlay ve Ziya Öniş</div>
+        <div>Batı Sonrası Dünya</div>
+      </div>
+    </footer>
+  </body>
+</html>

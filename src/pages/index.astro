@@ -1,0 +1,79 @@
+---
+import Base from '../layouts/Base.astro';
+import PostCard from '../components/PostCard.astro';
+import { posts } from '../data/posts.js';
+---
+<Base title="Batı Sonrası Dünya">
+  <section class="hero">
+    <div class="wrap hero-inner">
+      <p class="hero-authors">Mustafa Kutlay · Ziya Öniş</p>
+      <h1>Batı Sonrası Dünya</h1>
+      <p class="hero-subtitle">Uluslararası Düzenin Krizi, ABD-Çin Rekabeti, Küresel Güney ve Türkiye</p>
+      <div class="actions">
+        <a class="button button-primary" href="SATIN_ALMA_LINKI" target="_blank" rel="noreferrer">Kitabı Satın Al</a>
+        <a class="button button-secondary" href="/kitap/">Kitabı İncele</a>
+      </div>
+    </div>
+  </section>
+
+  <section class="section">
+    <div class="reading">
+      <p class="eyebrow">Kitabın temel meselesi</p>
+      <h2>Batı merkezli uluslararası düzen nereye gidiyor?</h2>
+      <p class="lead">Yirmi birinci yüzyılın ikinci çeyreğini Batı derin bir krizle karşıladı. Uluslararası sistem, ABD ile Çin arasındaki rekabetin şekillendirdiği bir hegemonya mücadelesine sahne oluyor.</p>
+      <p>Küreselleşme kırılgan hale gelirken ekonomik korumacılık yükseliyor; ticaret ve teknoloji savaşları yoğunlaşıyor. Küresel Güney ülkeleri artan belirsizlikleri yönetmeye ve kendilerine yeni hareket alanları açmaya çalışıyor.</p>
+      <a class="text-link" href="/kitap/">Kitabın yaklaşımını ayrıntılı incele →</a>
+    </div>
+  </section>
+
+  <section class="section section-alt">
+    <div class="wrap">
+      <div class="section-head">
+        <div>
+          <p class="eyebrow">Dört ana eksen</p>
+          <h2>Kitabın odak noktaları</h2>
+        </div>
+      </div>
+      <div class="topic-grid">
+        <article class="topic-card"><h3>Uluslararası düzenin krizi</h3><p>1945 sonrasında kurulan düzenin dönüşümü ve Batı merkezli sistemin karşılaştığı meydan okumalar.</p></article>
+        <article class="topic-card"><h3>ABD–Çin rekabeti</h3><p>Ekonomi, teknoloji, güvenlik ve jeopolitik alanlarında yoğunlaşan hegemonya mücadelesi.</p></article>
+        <article class="topic-card"><h3>Küresel Güney</h3><p>Gelişmekte olan ülkelerin yeni güç dağılımı içinde kendilerine alan açma arayışları.</p></article>
+        <article class="topic-card"><h3>Türkiye</h3><p>Dönüşen küresel düzenin Türkiye’nin ekonomi politiği ve dış politikası üzerindeki etkileri.</p></article>
+      </div>
+    </div>
+  </section>
+
+  <section class="section">
+    <div class="wrap">
+      <div class="section-head">
+        <div>
+          <p class="eyebrow">Güncel analizler</p>
+          <h2>Son yazılar</h2>
+        </div>
+        <a class="text-link" href="/yazilar/">Tüm yazılar →</a>
+      </div>
+      <div class="post-grid">
+        {posts.slice(0, 2).map((post) => <PostCard post={post} />)}
+      </div>
+    </div>
+  </section>
+
+  <section class="quote-band">
+    <div class="wrap">
+      <blockquote>“Batı-merkezli uluslararası düzen çoklu meydan okumalarla karşı karşıya.”</blockquote>
+    </div>
+  </section>
+
+  <section class="section">
+    <div class="wrap">
+      <div class="section-head">
+        <div><p class="eyebrow">Yazarlar</p><h2>Mustafa Kutlay ve Ziya Öniş</h2></div>
+        <a class="text-link" href="/yazarlar/">Biyografileri oku →</a>
+      </div>
+      <div class="author-grid">
+        <article class="author-card"><h3>Mustafa Kutlay</h3><p>Uluslararası ve karşılaştırmalı politik ekonomi, Küresel Güney, yükselen güçler ve Türkiye’nin ekonomi politiği üzerine çalışmaktadır.</p></article>
+        <article class="author-card"><h3>Ziya Öniş</h3><p>Uluslararası politik ekonomi, demokratikleşme, küresel düzen, BRICS ve Türkiye’nin ekonomi politiği üzerine çalışmaktadır.</p></article>
+      </div>
+    </div>
+  </section>
+</Base>

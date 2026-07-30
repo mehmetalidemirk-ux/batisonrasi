@@ -1,0 +1,19 @@
+---
+const { post } = Astro.props;
+const formattedDate = new Date(post.date).toLocaleDateString('tr-TR', {
+  day: 'numeric',
+  month: 'long',
+  year: 'numeric'
+});
+---
+<article class="post-card">
+  <div class="tags">
+    {post.categories.map((category) => <span class="tag">{category}</span>)}
+  </div>
+  <h3><a href={`/yazilar/${post.slug}/`}>{post.title}</a></h3>
+  <p class="meta">{formattedDate} · {post.authors}</p>
+  <p class="excerpt">{post.excerpt}</p>
+  <div class="card-bottom">
+    <a class="text-link" href={`/yazilar/${post.slug}/`}>Yazıyı incele →</a>
+  </div>
+</article>
