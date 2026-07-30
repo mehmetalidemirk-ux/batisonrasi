@@ -1,4 +1,3 @@
 User-agent: *
 Allow: /
-
-Sitemap: https://www.batisonrasi.com/sitemap.xml
+Sitemap: https://mehmetalidemirk-ux.github.io/batisonrasi/sitemap.xml

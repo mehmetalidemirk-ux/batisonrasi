@@ -35,53 +35,195 @@
 .article-hero-media{width:min(var(--wide),calc(100% - 3rem));margin:0 auto;padding-top:2rem}
 .article-hero-media img{display:block;width:100%;max-height:620px;object-fit:cover;box-shadow:var(--shadow)}
 @media(max-width:650px){.article-hero-media{width:min(var(--wide),calc(100% - 1.5rem));padding-top:1rem}}
-/* Yazı görsellerini daima görünür yap */
 
-.post-visual::before {
-  display: none !important;
-}
 
+/* =========================================================
+   v7 — gerçek Erdapfel görselleri ve kalıcı yazı görselleri
+   ========================================================= */
+
+/* Yazı kartlarında fotoğraflar her zaman görünürdür. */
 .post-visual {
   position: relative;
+  display: block;
   height: 280px;
   padding: 0;
   overflow: hidden;
-  background: #d7dfe4;
+  background: #cfd8de;
 }
-
+.post-card.wealth .post-visual,
+.post-card.brics .post-visual {
+  background: #cfd8de;
+}
+.post-visual::before {
+  display: none !important;
+  content: none !important;
+}
 .post-visual img {
   position: absolute;
   inset: 0;
   z-index: 0;
   width: 100%;
   height: 100%;
-  display: block;
   object-fit: cover;
+  object-position: center;
   opacity: 1 !important;
   visibility: visible !important;
+  filter: none !important;
   transform: none;
+  transition: transform .35s ease;
 }
-
+.post-card.brics .post-visual img {
+  object-position: center 38%;
+}
 .post-visual::after {
   content: "";
   position: absolute;
   inset: 0;
   z-index: 1;
   pointer-events: none;
-  background: linear-gradient(
-    to top,
-    rgba(11, 31, 47, 0.24),
-    rgba(11, 31, 47, 0) 45%
-  );
+  background: linear-gradient(to top, rgba(9, 28, 43, .28), rgba(9, 28, 43, 0) 48%);
 }
-
 .post-chip {
   position: absolute;
   left: 1.2rem;
   bottom: 1.2rem;
   z-index: 2;
 }
-
 .post-card:hover .post-visual img {
-  transform: scale(1.02);
+  transform: scale(1.025);
+}
+
+/* Erdapfel: ana sayfa ve tüm iç sayfalarda ortak görsel imza. */
+.hero,
+.page-hero,
+.article-header {
+  isolation: isolate;
+  position: relative;
+  overflow: hidden;
+}
+.hero > .wrap,
+.page-hero > .wrap,
+.article-header > .article-head-inner {
+  position: relative;
+  z-index: 3;
+}
+.hero::before {
+  content: "";
+  position: absolute;
+  z-index: 1;
+  right: -2.8rem;
+  top: 1.2rem;
+  width: min(46vw, 670px);
+  aspect-ratio: 1;
+  pointer-events: none;
+  background: var(--erdapfel-globe-url) no-repeat center / contain;
+  opacity: .24;
+  filter: saturate(.82) contrast(1.03);
+}
+.hero::after {
+  content: "";
+  position: absolute;
+  z-index: 2;
+  right: 2rem;
+  bottom: -9rem;
+  width: 26rem;
+  height: 38rem;
+  pointer-events: none;
+  background: var(--erdapfel-stand-url) no-repeat center bottom / contain;
+  opacity: .13;
+  mix-blend-mode: screen;
+}
+
+/* İç sayfalarda objenin tamamı, sakin ve editoryal bir ölçekte. */
+.page-hero::before,
+.article-header::before {
+  content: "";
+  position: absolute;
+  z-index: 1;
+  right: clamp(1rem, 6vw, 7rem);
+  top: 50%;
+  transform: translateY(-50%);
+  width: clamp(150px, 18vw, 260px);
+  height: 120%;
+  pointer-events: none;
+  background: var(--erdapfel-stand-url) no-repeat center / contain;
+  opacity: .12;
+  filter: saturate(.68) contrast(.95);
+}
+.page-hero::after,
+.article-header::after {
+  content: "";
+  position: absolute;
+  z-index: 0;
+  right: -7rem;
+  top: -9rem;
+  width: 28rem;
+  height: 28rem;
+  pointer-events: none;
+  background: var(--erdapfel-globe-url) no-repeat center / contain;
+  opacity: .055;
+}
+
+/* Kitap maketinde harita dokusu, yazının arkasında hafif kalır. */
+.book-cover::before {
+  content: "";
+  position: absolute;
+  z-index: 0;
+  right: -3.2rem;
+  bottom: 2.2rem;
+  width: 14rem;
+  height: 14rem;
+  background: var(--erdapfel-globe-url) no-repeat center / contain;
+  opacity: .17;
+  filter: saturate(.75) sepia(.08);
+}
+.book-cover > * {
+  position: relative;
+  z-index: 1;
+}
+
+/* Makale ana fotoğrafları. */
+.article-hero-media img {
+  opacity: 1 !important;
+  visibility: visible !important;
+}
+
+@media (max-width: 900px) {
+  .hero::before {
+    right: -8rem;
+    top: 8rem;
+    width: 32rem;
+    opacity: .18;
+  }
+  .hero::after {
+    display: none;
+  }
+  .page-hero::before,
+  .article-header::before {
+    right: -2.5rem;
+    opacity: .08;
+  }
+}
+
+@media (max-width: 650px) {
+  .post-visual {
+    height: 230px;
+  }
+  .hero::before {
+    display: block;
+    right: -9rem;
+    top: 15rem;
+    width: 24rem;
+    opacity: .11;
+  }
+  .page-hero::before,
+  .article-header::before {
+    width: 145px;
+    right: -3.4rem;
+    opacity: .065;
+  }
+  .page-hero::after,
+  .article-header::after {
+    display: none;
+  }
 }

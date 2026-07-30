@@ -24,3 +24,11 @@ Bu dört görsel eklendiğinde komponentler hızlıca güncellenebilir.
 
 ## v6
 Yazar ve makale görselleri entegre edildi. Proje www.batisonrasi.com özel alan adına, robots.txt ve sitemap.xml ile Google indekslemeye hazırlandı.
+
+
+## v7
+
+- Yazı kartlarındaki fotoğrafları örten eski dekoratif katman kaldırıldı.
+- Kullanıcı tarafından sağlanan iki gerçek Erdapfel fotoğrafından kırpılmış ve arka planı temizlenmiş web görselleri üretildi.
+- Erdapfel ana sayfada, iç sayfa başlıklarında ve kitap maketinde tutarlı bir görsel motif olarak kullanıldı.
+- Bu paket geçici GitHub Pages adresi (`/batisonrasi/`) için yapılandırılmıştır; `public/CNAME` bilinçli olarak bulunmaz.
