@@ -1,10 +1,57 @@
 ---
 import '../styles/global.css';
-const { title='Batı Sonrası Dünya', description='Uluslararası Düzenin Krizi, ABD-Çin Rekabeti, Küresel Güney ve Türkiye' } = Astro.props;
+const {
+  title='Batı Sonrası Dünya',
+  description='Uluslararası Düzenin Krizi, ABD-Çin Rekabeti, Küresel Güney ve Türkiye',
+  image='/images/og-default.jpg'
+} = Astro.props;
 const base = import.meta.env.BASE_URL;
 const link=(p)=>`${base}${p.replace(/^\//,'')}`;
+const asset=(p)=>`${base}${p.replace(/^\//,'')}`;
 const path=Astro.url.pathname;
+const canonical = new URL(Astro.url.pathname, Astro.site ?? 'https://www.batisonrasi.com').toString();
+const ogImage = new URL(image, Astro.site ?? 'https://www.batisonrasi.com').toString();
 const nav=[['','Ana Sayfa'],['kitap/','Kitap'],['yazarlar/','Yazarlar'],['yazilar/','Yazılar'],['kunye/','Künye'],['iletisim/','İletişim']];
 ---
-<!doctype html><html lang="tr"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width"><meta name="description" content={description}><meta property="og:title" content={title}><meta property="og:description" content={description}><meta property="og:type" content="website"><meta name="twitter:card" content="summary_large_image"><link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin><link href="https://fonts.googleapis.com/css2?family=Inter:wght@500;600;700;800&family=Source+Serif+4:opsz,wght@8..60,400;8..60,600;8..60,700&display=swap" rel="stylesheet"><title>{title}</title></head>
-<body><header class="site-header"><div class="wrap header-inner"><a class="brand" href={link('')}>Batı Sonrası Dünya</a><nav class="nav" aria-label="Ana menü">{nav.map(([href,label])=><a class={path===link(href)||path===link(href).slice(0,-1)?'active':''} href={link(href)}>{label}</a>)}<span class="coming">Yakında satışta</span></nav></div></header><main><slot /></main><footer class="site-footer"><div class="wrap footer-grid"><div><strong>Batı Sonrası Dünya</strong><p>Mustafa Kutlay ve Ziya Öniş</p></div><div><a href={link('iletisim/')}>İletişim</a><p>mehmetalidemirk@gmail.com</p></div><div><p>© {new Date().getFullYear()} Tüm hakları saklıdır.</p></div></div></footer></body></html>
+<!doctype html>
+<html lang="tr">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width">
+  <meta name="description" content={description}>
+  <link rel="canonical" href={canonical}>
+  <meta property="og:title" content={title}>
+  <meta property="og:description" content={description}>
+  <meta property="og:type" content="website">
+  <meta property="og:url" content={canonical}>
+  <meta property="og:image" content={ogImage}>
+  <meta name="twitter:card" content="summary_large_image">
+  <link rel="icon" type="image/svg+xml" href={asset('favicon.svg')}>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@500;600;700;800&family=Source+Serif+4:opsz,wght@8..60,400;8..60,600;8..60,700&display=swap" rel="stylesheet">
+  <title>{title}</title>
+</head>
+<body style={`--erdapfel-url: url(${asset('brand/erdapfel-globe.svg')})`}>
+  <header class="site-header">
+    <div class="wrap header-inner">
+      <a class="brand" href={link('')}>
+        <img src={asset('brand/site-mark.svg')} alt="Batı Sonrası Dünya işareti" width="34" height="34">
+        <span>Batı Sonrası Dünya</span>
+      </a>
+      <nav class="nav" aria-label="Ana menü">
+        {nav.map(([href,label])=><a class={path===link(href)||path===link(href).slice(0,-1)?'active':''} href={link(href)}>{label}</a>)}
+        <span class="coming">Yakında satışta</span>
+      </nav>
+    </div>
+  </header>
+  <main><slot /></main>
+  <footer class="site-footer">
+    <div class="wrap footer-grid">
+      <div><strong class="footer-brand"><img src={asset('brand/site-mark.svg')} alt="" width="28" height="28"><span>Batı Sonrası Dünya</span></strong><p>Mustafa Kutlay ve Ziya Öniş</p></div>
+      <div><a href={link('iletisim/')}>İletişim</a><p>mehmetalidemirk@gmail.com</p></div>
+      <div><p>© {new Date().getFullYear()} Tüm hakları saklıdır.</p></div>
+    </div>
+  </footer>
+</body>
+</html>

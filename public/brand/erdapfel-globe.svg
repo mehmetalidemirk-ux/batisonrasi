@@ -1,0 +1,18 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 600 600" fill="none">
+  <defs>
+    <radialGradient id="g" cx="0" cy="0" r="1" gradientUnits="userSpaceOnUse" gradientTransform="translate(300 280) rotate(90) scale(260)">
+      <stop stop-color="#F6F3EC" stop-opacity="0.38"/>
+      <stop offset="1" stop-color="#F6F3EC" stop-opacity="0"/>
+    </radialGradient>
+  </defs>
+  <circle cx="300" cy="300" r="250" fill="url(#g)"/>
+  <circle cx="300" cy="300" r="214" stroke="#F6F3EC" stroke-width="5" stroke-opacity="0.35"/>
+  <ellipse cx="300" cy="300" rx="214" ry="98" stroke="#F6F3EC" stroke-width="3.5" stroke-opacity="0.26"/>
+  <ellipse cx="300" cy="300" rx="214" ry="154" stroke="#F6F3EC" stroke-width="3.5" stroke-opacity="0.22"/>
+  <ellipse cx="300" cy="300" rx="98" ry="214" stroke="#F6F3EC" stroke-width="3.5" stroke-opacity="0.24"/>
+  <ellipse cx="300" cy="300" rx="154" ry="214" stroke="#F6F3EC" stroke-width="3.5" stroke-opacity="0.2"/>
+  <path d="M186 204c15-24 40-39 72-46 24-5 52-5 77 2 18 6 39 18 55 36-15 3-30 10-43 21-12 10-19 20-25 34-30-9-56-9-84-2-18 4-35 9-52 19 0-23 1-42 0-64Z" stroke="#F6F3EC" stroke-width="4" stroke-opacity="0.28" stroke-linejoin="round"/>
+  <path d="M177 333c26-15 52-24 78-28 30-4 56-1 87 7 25 7 46 17 78 16-15 19-25 38-29 62-29 4-54 4-76-2-37-11-74-10-111-1-15 4-30 10-46 17 10-24 16-47 19-71Z" stroke="#F6F3EC" stroke-width="4" stroke-opacity="0.26" stroke-linejoin="round"/>
+  <path d="M305 63v474" stroke="#F6F3EC" stroke-width="2.5" stroke-opacity="0.18" stroke-dasharray="10 10"/>
+  <path d="M63 300h474" stroke="#F6F3EC" stroke-width="2.5" stroke-opacity="0.18" stroke-dasharray="10 10"/>
+</svg>

@@ -1,0 +1,1 @@
+Bu klasöre gerçek makale görsellerini koyabilirsiniz: brics-rio.jpg ve esitsizlik-demokrasi.jpg

@@ -1,4 +1,19 @@
 ---
 import Base from '../layouts/Base.astro';
+const base = import.meta.env.BASE_URL;
 ---
-<Base title="Yazarlar — Batı Sonrası Dünya"><section class="page-hero"><div class="wrap"><p class="eyebrow">Yazarlar</p><h1>Mustafa Kutlay ve Ziya Öniş</h1></div></section><section class="section"><div class="wrap author-profiles"><article><div class="portrait initials">MK</div><div><h2>Mustafa Kutlay</h2><p>Doç. Dr. Mustafa Kutlay, City St George’s, University of London’da Uluslararası Siyaset bölümünde öğretim üyesidir. İstanbul Politikalar Merkezi’nde kıdemli uzmandır. Aynı zamanda University of Kent bünyesindeki Çatışma Analizi Araştırma Merkezi’nin kıdemli araştırmacılarındandır.</p><p>Uluslararası ve karşılaştırmalı politik ekonomi, yükselen güçler, BRICS ve küreselleşme, orta ölçekli güçler ve küresel düzen, Türkiye’nin ekonomi-politiği ve dış politikası üzerine araştırmalar yapmaktadır.</p></div></article><article><div class="portrait initials">ZÖ</div><div><h2>Ziya Öniş</h2><p>Prof. Ziya Öniş, Koç Üniversitesi Uluslararası İlişkiler Bölümü’nde uluslararası politik ekonomi profesörüdür. Koç Üniversitesi Küreselleşme, Barış ve Demokratik Yönetişim Merkezi Direktörlüğü ve Sosyal Bilimler Enstitüsü Direktörlüğü görevlerinde bulunmuştur.</p><p>Çalışmaları liberal demokrasinin krizi, küresel popülist dalga, otoriter geri dönüşler, Batı sonrası düzen, BRICS’in genişleme süreçleri, Küresel Güney ve Türkiye’nin ekonomi politiği üzerinde yoğunlaşmaktadır.</p></div></article></div></section></Base>
+<Base title="Yazarlar — Batı Sonrası Dünya" description="Mustafa Kutlay ve Ziya Öniş'in biyografileri.">
+  <section class="page-hero"><div class="wrap"><p class="eyebrow">Yazarlar</p><h1>Mustafa Kutlay ve Ziya Öniş</h1></div></section>
+  <section class="section">
+    <div class="wrap author-profiles">
+      <article>
+        <img class="portrait portrait-photo" src={`${base}images/authors/mustafa-kutlay.jpg`} alt="Mustafa Kutlay portresi" loading="lazy">
+        <div><h2>Mustafa Kutlay</h2><p>Doç. Dr. Mustafa Kutlay, City St George’s, University of London’da Uluslararası Siyaset bölümünde öğretim üyesidir. İstanbul Politikalar Merkezi’nde kıdemli uzmandır. Aynı zamanda University of Kent bünyesindeki Çatışma Analizi Araştırma Merkezi’nin kıdemli araştırmacılarındandır.</p><p>Uluslararası ve karşılaştırmalı politik ekonomi, yükselen güçler, BRICS ve küreselleşme, orta ölçekli güçler ve küresel düzen, Türkiye’nin ekonomi-politiği ve dış politikası üzerine araştırmalar yapmaktadır.</p></div>
+      </article>
+      <article>
+        <img class="portrait portrait-photo" src={`${base}images/authors/ziya-onis.jpg`} alt="Ziya Öniş portresi" loading="lazy">
+        <div><h2>Ziya Öniş</h2><p>Prof. Ziya Öniş, Koç Üniversitesi Uluslararası İlişkiler Bölümü’nde uluslararası politik ekonomi profesörüdür. Koç Üniversitesi Küreselleşme, Barış ve Demokratik Yönetişim Merkezi Direktörlüğü ve Sosyal Bilimler Enstitüsü Direktörlüğü görevlerinde bulunmuştur.</p><p>Çalışmaları liberal demokrasinin krizi, küresel popülist dalga, otoriter geri dönüşler, Batı sonrası düzen, BRICS’in genişleme süreçleri, Küresel Güney ve Türkiye’nin ekonomi politiği üzerinde yoğunlaşmaktadır.</p></div>
+      </article>
+    </div>
+  </section>
+</Base>

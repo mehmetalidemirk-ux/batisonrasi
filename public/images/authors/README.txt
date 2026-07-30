@@ -1,0 +1,1 @@
+Bu klasöre gerçek yazar fotoğraflarını koyabilirsiniz: mustafa-kutlay.jpg ve ziya-onis.jpg
