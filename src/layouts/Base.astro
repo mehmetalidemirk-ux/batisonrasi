@@ -11,7 +11,7 @@ const asset=(p)=>`${base}${p.replace(/^\//,'')}`;
 const path=Astro.url.pathname;
 const canonical = new URL(Astro.url.pathname, Astro.site ?? 'https://www.batisonrasi.com').toString();
 const ogImage = new URL(image, Astro.site ?? 'https://www.batisonrasi.com').toString();
-const nav=[['','Ana Sayfa'],['kitap/','Kitap'],['yazarlar/','Yazarlar'],['yazilar/','Yazılar'],['kunye/','Künye'],['iletisim/','İletişim']];
+const nav=[['','Ana Sayfa'],['kitap/','Kitap'],['yazarlar/','Yazarlar'],['blog/','Blog'],['videolar/','Videolar'],['kunye/','Künye'],['iletisim/','İletişim']];
 ---
 <!doctype html>
 <html lang="tr">
