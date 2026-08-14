@@ -271,3 +271,6 @@
 .inline-citation{color:var(--magenta)}
 .references{list-style:none;padding-left:1.5rem}
 .publication-note{margin-top:3.5rem;padding-top:1.2rem;border-top:1px solid var(--line);color:var(--muted);font-size:.92rem;font-style:italic}
+
+/* Ana sayfadaki uzatılmış kapanış alıntısı. */
+.quote-band p{font-size:clamp(1.65rem,3.2vw,2.9rem)}
