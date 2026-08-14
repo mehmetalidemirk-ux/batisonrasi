@@ -1,16 +1,96 @@
 ---
 import Base from '../layouts/Base.astro';
 const chapters = [
-  'Soğuk Savaş’tan Tukidides Tuzağı’na',
-  'Amerikan hegemonyasının inşası ve dönüşümü',
-  'Batı’nın geçici zaferi: Neoliberalizmin yükselişi',
-  'Çoklu krizler döneminde Batı’nın kademeli güç kaybı',
-  'Çin’in uzun yürüyüşü',
-  'Geçmişin uzun gölgesi: Küresel Güney ve BRICS',
-  'Tersine dönüşüm: Avrupa Birliği’nin küresel rolü',
-  'Orta ölçekli güçler ve stratejik otonomi: Türkiye’nin küresel konumu',
-  'Batı-sonrası dünyada demokrasi, kapitalizm ve otokrasi',
-  'Yeniden büyük güç rekabeti: Sinyal ile gürültüyü ayırmak'
+  {
+    title: 'Soğuk Savaş’tan Tukidides Tuzağı’na',
+    description: 'Bu bölüm Soğuk Savaş’tan günümüze büyük güç mücadelesini inceliyor. Batı sonrası dünyanın uzun ortaya çıkış hikâyesini ele alıyor. Ayrıca kitabın temel amacını ve argümanlarını özetliyor.',
+    questions: [
+      'Soğuk Savaş’tan 21. yüzyıla büyük güç mücadelesi ne şekilde evrildi?',
+      'ABD-Çin rekabetinin gölgesinde Batı sonrası dünya nasıl ortaya çıkıyor?',
+      'Kitabın temel amacı ve argümanları nelerdir?'
+    ]
+  },
+  {
+    title: 'Amerikan hegemonyasının inşası ve dönüşümü',
+    description: 'Bu bölüm, Amerikan hegemonyası altında Batı merkezli uluslararası düzenin kuruluşunu, dönüşümünü ve alternatif politik ekonomi sistemlerine karşı nasıl galip geldiğini ele alıyor.',
+    questions: [
+      'Amerikan hegemonyası nasıl inşa edildi?',
+      '1945 sonrasında ABD merkezli uluslararası düzen nasıl ortaya çıktı?',
+      'ABD, Sovyetler Birliği karşısında Soğuk Savaşı nasıl kazandı?'
+    ]
+  },
+  {
+    title: 'Batı’nın geçici zaferi: Neoliberalizmin yükselişi',
+    description: 'Bu bölüm Sovyetler Birliği’nin dağılmasının ardından neoliberalizmin küreselleşmesini, ABD liderliğinde ‘tek kutuplu’ sistemin ortaya çıkışını ve neoliberal paradigmanın güçlü ve zayıf yanlarını inceliyor.',
+    questions: [
+      'Soğuk Savaş sonrasında ‘tek kutuplu’ uluslararası sistem nasıl inşa edildi?',
+      'Neoliberalizm ile ‘liberal uluslararası düzen’ arasındaki ilişki nedir?',
+      'Neoliberal siyasi iktisat paradigması niçin küresel bir etki kazandı?'
+    ]
+  },
+  {
+    title: 'Çoklu krizler döneminde Batı’nın kademeli güç kaybı',
+    description: 'Bu bölüm 21. yüzyılın ilk çeyreğinde Batı merkezli uluslararası düzenin çoklu krizler nedeniyle nasıl kademeli olarak gerilediğini ve Batı-sonrası dünya fikrinin giderek güç kazandığını ele alıyor.',
+    questions: [
+      '21. yüzyılın ilk çeyreğinde küresel siyaseti hangi dinamikler şekillendirdi?',
+      'Batı merkezli uluslararası düzenin gerilemesine yol açan temel krizler nelerdir?',
+      'Çoklu krizler Batı-sonrası dünya fikrine nasıl görünürlük kazandırdı?'
+    ]
+  },
+  {
+    title: 'Çin’in uzun yürüyüşü',
+    description: 'Bu bölüm Çin’in fakir bir ülkeden dünyanın en büyük ikinci ekonomisine ve en güçlü üretim havzasına dönüşüne odaklanıyor. Çin’in devlet kapitalizmi modelini nasıl etkin bir şekilde uyguladığını ve Batı-sonrası dünyanın inşasında hangi araçlarla bir gösterge etkisine sahip olduğunu analiz ediyor. Kuşak ve Yol Girişimi gibi mega inisiyatiflerin, aktif sanayi politikalarının ve devletin ekonomik rolünün Çin’in kalkınması ve küresel etkisindeki rolünü ele alıyor.',
+    questions: [
+      'Çin, kısa bir süre içinde nasıl fakir ve geri kalmış bir ülkeden bir ticaret ve teknoloji devine dönüştü?',
+      'Batı dünyası niçin Çin’i yanlış okudu?',
+      'Çin’in yükselişinin Küresel Güney ve dünya düzeni için anlamı nedir?'
+    ]
+  },
+  {
+    title: 'Geçmişin uzun gölgesi: Küresel Güney ve BRICS',
+    description: 'Bu bölüm Küresel Güney kavramının katmanlı tarihini inceliyor. Küresel Güney’in analitik olarak anlamlı bir kavram olduğunu, ancak bazı kısıtları bulunduğunu öne sürüyor. Küresel Güney’deki ‘kalkınmacı devlet’ örneklerini diğer başarısız devlet müdahaleleriyle karşılaştırıyor. BRICS oluşumunun kısa tarihini, BRICS’in kurumsal yapısını, potansiyelini ve temel sorunlarını ele alıyor.',
+    questions: [
+      'Küresel Güney kavramının tarihsel kökenleri nelerdir?',
+      'Küresel Güney’de niçin bazı ülkeler büyük kalkınma başarıları elde etmişken diğerleri bunu başaramamıştır?',
+      'BRICS’in güçlü ve zayıf yönleri nelerdir?'
+    ]
+  },
+  {
+    title: 'Tersine dönüşüm: Avrupa Birliği’nin küresel rolü',
+    description: 'Bu bölüm, AB projesinin ABD hegemonyasında şekillenen ‘liberal uluslararası düzen’ altında nasıl ortaya çıktığını ve geliştiğini, Batı-sonrası dünyada AB’nin küresel konumunu ve ABD-Çin rekabetinde nasıl konumlanabileceğini tartışıyor.',
+    questions: [
+      'AB’nin Batı-sonrası dünyada yeri ve rolü nedir?',
+      'ABD’nin sağladığı güvenlik şemsiyesinin ortadan kalktığı bir uluslararası düzende, AB varlığını sürdürebilir mi?',
+      'AB, ABD-Çin büyük güç rekabetinde etkili bir aktör olarak konumlanabilir mi?'
+    ]
+  },
+  {
+    title: 'Orta ölçekli güçler ve stratejik otonomi: Türkiye’nin küresel konumu',
+    description: 'Bu bölüm küresel siyasette orta ölçekli güçleri ele alıyor. Stratejik otonomi arayışının bu ülkeler için güç geçişleri döneminde bir ‘imkân’ ve ‘gereklilik’ olduğunu vurguluyor. Türkiye’nin yüzyıllık dönüşümünü ana hatlarıyla inceleyerek Batı-sonrası dünyadaki konumunu, ekonomik kalkınması ve dış politikası ekseninde analiz ediyor.',
+    questions: [
+      'Küresel siyasette orta ölçekli güçlerin rolü nedir?',
+      'Küresel güç geçişleri döneminde ‘stratejik otonomi’ neden önemlidir?',
+      'Türkiye’nin Batı sonrası dünyadaki konumu nasıl ele alınabilir?'
+    ]
+  },
+  {
+    title: 'Batı-sonrası dünyada demokrasi, kapitalizm ve otokrasi',
+    description: 'Bu bölüm demokratik kapitalizmin krizi, popülizmin yükselişi ve otoriter devlet kapitalizminin küresel ölçekte görünürlük kazanmasını ele alıyor. Alternatif bir paradigma olarak ‘demokratik kalkınmacılık’ fikrini önererek, Batı-sonrası dünyada kalkınma ve özgürlükler ilişkisini yeniden düşünmeyi amaçlıyor.',
+    questions: [
+      'Demokratik gerileme ve popülizmin yükselişi niçin küresel bir trende dönüştü?',
+      'Kapitalizm ile demokrasi uzlaşmaz iki kavram mıdır?',
+      'Batı-sonrası dünyada demokrasi ve kapitalizm ilişkisini nasıl düşünmek gerekir?'
+    ]
+  },
+  {
+    title: 'Yeniden büyük güç rekabeti: Sinyal ile gürültüyü ayırmak',
+    description: 'Bu bölüm Batı-sonrası dünya tartışmalarında dört temel sinyale odaklanmak gerektiğini vurguluyor. Kitabın temel argümanlarını özetleyerek, ABD-Çin arasındaki rekabetin ve küresel siyasetin geleceğine ilişkin öngörülerde bulunuyor.',
+    questions: [
+      'ABD-Çin rekabeti gölgesinde uluslararası sistem nasıl kavramsallaştırılabilir? Tek kutuplu mu, iki kutuplu mu, yoksa çok kutuplu bir dünyada mı yaşıyoruz?',
+      'Artan küresel belirsizlikler, devletleri, şirketleri ve toplumları nasıl etkiliyor?',
+      'Güç geçişleri döneminde sinyal ile gürültü nasıl ayırt edilebilir?'
+    ]
+  }
 ];
 ---
-<Base title="Kitap — Batı Sonrası Dünya"><section class="page-hero"><div class="wrap"><p class="eyebrow">Kitap</p><h1>Batı Sonrası Dünya</h1><p>Uluslararası Düzenin Krizi, ABD-Çin Rekabeti, Küresel Güney ve Türkiye</p></div></section><section class="section"><div class="reading"><h2>Kitabın amacı ve yaklaşımı</h2><p>Yirmi birinci yüzyılın ikinci çeyreğini Batı derin bir krizle karşıladı. Uluslararası sistem, ABD ile Çin arasındaki rekabetin şekillendirdiği bir hegemonya mücadelesine sahne oluyor. Küreselleşme kırılgan hale geliyor. Ekonomik korumacılık yükseliyor, ticaret ve teknoloji savaşları yoğunlaşıyor.</p><p>ABD-Çin ilişkileri nasıl şekillenecek? Küresel Güney ülkeleri ve orta ölçekli güçler bu denge oyununda nasıl konumlanacak? Küresel güç geçişleri demokrasi ve kalkınmanın temel parametrelerini nasıl şekillendirecek? Kısacası, Batı sonrası dünya refah, özgürlükler ve küresel düzen açısından nasıl bir dünya olacak?</p><p>Bu kitap, siyaset bilimi, uluslararası ilişkiler ve siyasi iktisat disiplinlerini bir araya getirerek Batı-sonrası dünyanın uzun ortaya çıkış hikâyesini anlatmayı amaçlıyor. Uluslararası siyasetin çok aktörlü ve çok boyutlu dünyasında, ‘aslında ne oldu’, ‘bugüne nasıl geldik’ ve ‘bundan sonrası nasıl şekillenebilir’ sorularına cevap arıyor.</p><h2>Kitabın bölümleri</h2><div class="chapter-list">{chapters.map((chapter, index)=><details><summary><span>{String(index + 1).padStart(2, '0')}</span>{chapter}</summary><p>Bölüm tanıtımı yakında eklenecektir.</p></details>)}</div><h2>Yakında</h2><p>Yayınevi bilgileri ve satış bağlantıları kitap yayına yaklaştıkça bu sayfaya eklenecektir.</p></div></section></Base>
+<Base title="Kitap — Batı Sonrası Dünya"><section class="page-hero"><div class="wrap"><p class="eyebrow">Kitap</p><h1>Batı Sonrası Dünya</h1><p>Uluslararası Düzenin Krizi, ABD-Çin Rekabeti, Küresel Güney ve Türkiye</p></div></section><section class="section"><div class="reading"><h2>Kitabın amacı ve yaklaşımı</h2><p>Yirmi birinci yüzyılın ikinci çeyreğini Batı derin bir krizle karşıladı. Uluslararası sistem, ABD ile Çin arasındaki rekabetin şekillendirdiği bir hegemonya mücadelesine sahne oluyor. Küreselleşme kırılgan hale geliyor. Ekonomik korumacılık yükseliyor, ticaret ve teknoloji savaşları yoğunlaşıyor.</p><p>ABD-Çin ilişkileri nasıl şekillenecek? Küresel Güney ülkeleri ve orta ölçekli güçler bu denge oyununda nasıl konumlanacak? Küresel güç geçişleri demokrasi ve kalkınmanın temel parametrelerini nasıl şekillendirecek? Kısacası, Batı sonrası dünya refah, özgürlükler ve küresel düzen açısından nasıl bir dünya olacak?</p><p>Bu kitap, siyaset bilimi, uluslararası ilişkiler ve siyasi iktisat disiplinlerini bir araya getirerek Batı-sonrası dünyanın uzun ortaya çıkış hikâyesini anlatmayı amaçlıyor. Uluslararası siyasetin çok aktörlü ve çok boyutlu dünyasında, ‘aslında ne oldu’, ‘bugüne nasıl geldik’ ve ‘bundan sonrası nasıl şekillenebilir’ sorularına cevap arıyor.</p><h2>Kitabın bölümleri</h2><div class="chapter-list">{chapters.map((chapter, index)=><details><summary><span>{String(index + 1).padStart(2, '0')}</span>{chapter.title}</summary><ul class="chapter-questions">{chapter.questions.map(question=><li>{question}</li>)}</ul><p>{chapter.description}</p></details>)}</div><h2>Yakında</h2><p>Yayınevi bilgileri ve satış bağlantıları kitap yayına yaklaştıkça bu sayfaya eklenecektir.</p></div></section></Base>
