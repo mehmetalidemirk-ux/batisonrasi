@@ -274,3 +274,7 @@
 
 /* Ana sayfadaki uzatılmış kapanış alıntısı. */
 .quote-band p{font-size:clamp(1.65rem,3.2vw,2.9rem)}
+
+/* Kitap sayfasındaki bölüm soru setleri. */
+.chapter-questions{margin:-.25rem 0 .9rem 2.85rem;padding-left:1.1rem;color:var(--navy);font-size:.94rem;line-height:1.55}
+.chapter-questions li{margin:.38rem 0}
