@@ -268,3 +268,6 @@
 .note-back{margin-left:.4rem;color:var(--magenta);font:700 .78rem Inter,sans-serif;text-decoration:none}
 @media(max-width:900px){.hero{padding:5.25rem 0}.hero-grid{gap:3rem}.article-header{padding-top:4.5rem}}
 @media(max-width:650px){.hero h1{font-size:clamp(3rem,15vw,4.2rem)}.actions{flex-wrap:wrap}.chapter-list summary{font-size:.92rem}.article-header{padding:4rem 1.25rem 2.8rem}.article-header h1{font-size:clamp(2.35rem,12vw,3.4rem)}.article-content h2{font-size:1.7rem}.references,.endnotes{padding:1rem 1rem 1rem 2.25rem}}
+.inline-citation{color:var(--magenta)}
+.references{list-style:none;padding-left:1.5rem}
+.publication-note{margin-top:3.5rem;padding-top:1.2rem;border-top:1px solid var(--line);color:var(--muted);font-size:.92rem;font-style:italic}
