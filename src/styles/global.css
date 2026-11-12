@@ -278,3 +278,20 @@
 /* Kitap sayfasındaki bölüm soru setleri. */
 .chapter-questions{margin:-.25rem 0 .9rem 2.85rem;padding-left:1.1rem;color:var(--navy);font-size:.94rem;line-height:1.55}
 .chapter-questions li{margin:.38rem 0}
+
+/* v9 — Kitap sayfası: bölüm soruları yan yana, aralarında madde işareti. */
+.chapter-questions{list-style:none;padding-left:0}
+.chapter-questions li{display:inline;margin:0}
+.chapter-questions li+li::before{content:"•";margin:0 .55em;color:var(--magenta)}
+
+/* v9 — Blog yazısı: başlık, fotoğraf ve metin aynı sol hizadan başlar. */
+:root{--article-col:980px;--article-gutter:1.5rem}
+.article-header{padding-left:0;padding-right:0}
+.article-header>.article-head-inner{width:min(var(--article-col),calc(100% - 2 * var(--article-gutter)));max-width:none;margin:0 auto}
+.article-hero-media{width:min(var(--article-col),calc(100% - 2 * var(--article-gutter)));margin-left:auto;margin-right:auto}
+.article-content{width:min(var(--reading),calc(100% - 2 * var(--article-gutter)));margin-left:max(var(--article-gutter),calc((100% - var(--article-col)) / 2));margin-right:auto}
+@media(max-width:650px){:root{--article-gutter:1.25rem}}
+
+/* v9 — Blog yazısı fotoğraflarının altındaki kaynak notu. */
+.image-credit{margin:.55rem 0 0;font:500 .74rem/1.4 Inter,sans-serif;color:var(--muted)}
+.image-credit a{color:inherit;text-underline-offset:2px}

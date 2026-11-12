@@ -9,7 +9,7 @@ export const posts = [
     category: 'Siyasi İktisat',
     theme: 'wealth',
     image: '/images/posts/esitsizlik-demokrasi.jpg',
-    imageAlt: 'Farklı yüksekliklerde madeni para yığınlarının üzerinde duran insan figürleri; servet eşitsizliğini simgeleyen görsel.'
+    imageAlt: 'Manila’da nehir kıyısındaki gecekondular ve arka planda yükselen modern gökdelenler; servet eşitsizliğini simgeleyen görsel.'
   },
   {
     slug: 'brics-2025-rio-zirvesinin-ardindan',
@@ -21,6 +21,6 @@ export const posts = [
     category: 'Küresel Yönetişim',
     theme: 'brics',
     image: '/images/posts/brics-rio.jpg',
-    imageAlt: 'Brasil 2025 BRICS zirvesine katılan liderlerin grup fotoğrafı.'
+    imageAlt: 'Rio de Janeiro’nun kıyı şeridine ve şehre yukarıdan bakış.'
   }
 ];
